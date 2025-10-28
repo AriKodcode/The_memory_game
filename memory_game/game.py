@@ -34,7 +34,7 @@ def create_cards(x_y_size: dict):
 
 def shuffling_cards(deck: list):
     result = deck
-    for i in range(1000):
+    for i in range(len(deck) * 100):
         index1 = randrange(len(deck))
         index2 = randrange(len(deck))
         if index1 == index2:
@@ -73,8 +73,8 @@ def check_matrix(check):
 def check_coordinates(coordinates: dict, x_y: dict):
     x = x_y["x"]
     y = x_y["y"]
-    card1 = coordinates["card1"]
-    card2 = coordinates["card1"]
+    card1 = coordinates[0]
+    card2 = coordinates[1]
     if 0 < card1["x"] < x and 0 < card1["y"] < y and 0 < card2["x"] < x and 0 < card2["y"] < y:
         return True
     else:
