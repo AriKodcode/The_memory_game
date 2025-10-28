@@ -73,7 +73,7 @@ def check_matrix(check):
 def check_coordinates(coordinates: dict, x_y: dict):
     x = x_y["x"]
     y = x_y["y"]
-    if coordinates["x"] > 0 < x and coordinates["y"] > 0 < y:
+    if 0 < coordinates["x"] < x and 0 < coordinates["y"] < y:
         return True
     else:
         return False
