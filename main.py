@@ -31,7 +31,7 @@ def play():
                             play_game = False
                             game = False
                             break
-                coordinates = input_coordinates()
+                coordinates = input_coordinates(x_y)
                 checking = check_coordinates(coordinates,x_y)
                 if checking:
                     if new_matrix[coordinates["card1"]["x"]][coordinates["card1"]["y"]] and \

@@ -1,6 +1,3 @@
-from itertools import zip_longest
-
-
 def input_user():
     x = int(input("Enter an even number."))
     y = int(input("Enter an even number."))
