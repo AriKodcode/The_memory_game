@@ -60,8 +60,8 @@ def matrix_mixing(matrix: list, shuffling_cards2: list):
     return matrix
 
 def check_matrix(check):
-    if check == list:
-        return 'list'
+    if check:
+        return check
     elif check == "win":
         return "win"
     elif not check:

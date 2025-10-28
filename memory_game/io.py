@@ -16,3 +16,8 @@ def input_coordinates():
         "y": y
     }
     return dict1
+
+
+def print_matrix(matrix):
+    for vector in matrix:
+        print(vector)
