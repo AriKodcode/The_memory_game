@@ -9,13 +9,23 @@ def input_user():
 
 
 def input_coordinates():
-    x = int(input("Enter coordinate x"))
-    y = int(input("Enter coordinate y"))
-    dict1 = {
-        "x": x,
-        "y": y
+    cards = []
+    x1 = int(input("Enter coordinate x card 1"))
+    y1 = int(input("Enter coordinate y card 1"))
+    card1 = {
+        "x": x1,
+        "y": y1
     }
-    return dict1
+    x2 = int(input("Enter coordinate x card 2"))
+    y2 = int(input("Enter coordinate y card 2"))
+    card2 = {
+        "x": x2,
+        "y": y2
+    }
+
+    cards.append(card1)
+    cards.append(card2)
+    return cards
 
 
 def print_matrix(matrix):
