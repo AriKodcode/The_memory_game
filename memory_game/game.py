@@ -48,11 +48,11 @@ def matrix_initialization_for_x(matrix : list):
             vector[char] = "x"
     return matrix
 
-def matrix_mixing(matrix : list, shuffling_cards1 : list):
+def matrix_mixing(matrix : list, shuffling_cards2 : list):
     counter = 0
     for vector in matrix:
         for char in range(len(vector)):
-            vector[char] = str(shuffling_cards1[counter])
+            vector[char] = str(shuffling_cards2[counter])
             counter += 1
     return matrix
 
