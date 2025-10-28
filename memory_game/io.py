@@ -1,4 +1,4 @@
-from curses.ascii import isdigit
+from itertools import zip_longest
 
 
 def input_user():
@@ -11,41 +11,32 @@ def input_user():
     return dict1
 
 
-def input_coordinates():
-    on = True
-    cards = []
-    while on:
-        checking = True
-        while checking:
-            x1 = int(input("Enter coordinate x card 1"))
-            if not isdigit(x1):
-                print("press coordinate between 1 and len of matrix ")
+def input_coordinates(x_y):
+    x = x_y["x"]
+    y = x_y["y"]
+    while True:
+        cards = {}
+        x1 = (input("Enter coordinate x card 1"))
+        y1 = (input("Enter coordinate y card 1"))
+        card1 = {
+            "x": x1,
+            "y": y1
+        }
+        x2 = (input("Enter coordinate x card 2"))
+        y2 = (input("Enter coordinate y card 2"))
+        card2 = {
+            "x": x2,
+            "y": y2
+        }
+        cards.update(card1)
+        cards.update(card2)
+        if 0 < cards[card1]["x"] < len(x) and 0 < cards[card1]["y"] < len(y) and 0 < cards[card2]["x"] < len(x) and 0 < cards[card2]["y"] < len(y):
+            if int(cards[card1]["x"]) and int(cards[card1]["y"]) and int(cards[card2]["x"]) and int(cards[card2]["y"]):
                 break
-            y1 = int(input("Enter coordinate y card 1"))
-            if not isdigit(y1):
-                print("press coordinate between 1 and len of matrix ")
-                break
-            card1 = {
-                "x": x1,
-                "y": y1
-            }
-            x2 = int(input("Enter coordinate x card 2"))
-            if not isdigit(x2):
-                print("press coordinate between 1 and len of matrix ")
-                break
-            y2 = int(input("Enter coordinate y card 2"))
-            if not isdigit(y2):
-                print("press coordinate between 1 and len of matrix ")
-                break
-            card2 = {
-                "x": x2,
-                "y": y2
-            }
-            cards.append(card1)
-            cards.append(card2)
-            on = False
-            break
     return cards
+
+
+
 
 
 def print_matrix(matrix):
