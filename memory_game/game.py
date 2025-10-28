@@ -68,3 +68,12 @@ def check_matrix(check):
         return False
     else:
         return False
+
+
+def check_coordinates(coordinates: dict, x_y: dict):
+    x = x_y["x"]
+    y = x_y["y"]
+    if coordinates["x"] > 0 < x and coordinates["y"] > 0 < y:
+        return True
+    else:
+        return False
