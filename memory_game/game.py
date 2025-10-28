@@ -12,7 +12,7 @@ def create_matrix(x_y_size : dict):
            for i in range(x):
                vector = []
                for j in range(y):
-                   vector.append('x')
+                   vector.append("")
                matrix.append(vector)
         return matrix
     else:
@@ -22,7 +22,6 @@ def create_matrix(x_y_size : dict):
 def create_cards(x_y_size : dict):
     card_list = []
     x = x_y_size["x"]
-    print(x)
     y = x_y_size["y"]
     num_card = (x * y) // 2
     for num in range(num_card):
@@ -42,6 +41,14 @@ def shuffling_cards(deck : list):
         else:
             result[index1], result[index2] = result[index2], result[index1]
     return result
+
+def matrix_initialization_for_x(matrix : list):
+    for vector in matrix:
+        for char in range(len(vector)):
+            vector[char] = "x"
+    return matrix
+
+
 
 
 
