@@ -1,3 +1,5 @@
+from random import randrange
+
 def create_matrix(x_y_size : dict):
     x = x_y_size['x']
     y = x_y_size['y']
@@ -20,6 +22,7 @@ def create_matrix(x_y_size : dict):
 def create_cards(x_y_size : dict):
     card_list = []
     x = x_y_size["x"]
+    print(x)
     y = x_y_size["y"]
     num_card = (x * y) // 2
     for num in range(num_card):
@@ -28,6 +31,17 @@ def create_cards(x_y_size : dict):
 
     return card_list
 
+
+def shuffling_cards(deck : list):
+    result = deck
+    for i in range(1000):
+        index1 = randrange(len(deck))
+        index2 = randrange(len(deck))
+        if index1 == index2:
+            continue
+        else:
+            result[index1], result[index2] = result[index2], result[index1]
+    return result
 
 
 
