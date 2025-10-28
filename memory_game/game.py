@@ -17,5 +17,18 @@ def create_matrix(x_y_size : dict):
         return False
 
 
+def create_cards(x_y_size : dict):
+    card_list = []
+    x = x_y_size["x"]
+    y = x_y_size["y"]
+    num_card = (x * y) // 2
+    for num in range(num_card):
+        card_list.append(num)
+        card_list.append(num)
+
+    return card_list
+
+
+
 
 
