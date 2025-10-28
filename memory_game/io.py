@@ -22,7 +22,6 @@ def input_coordinates():
         "x": x2,
         "y": y2
     }
-
     cards.append(card1)
     cards.append(card2)
     return cards
