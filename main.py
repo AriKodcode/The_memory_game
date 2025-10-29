@@ -1,11 +1,12 @@
 from memory_game.game import create_matrix, create_cards, shuffling_cards, matrix_initialization_for_x, matrix_mixing, \
     check_matrix, check_coordinates
 from memory_game.io import input_user, input_coordinates,print_matrix
-
-
+import time
+import os
 
 def play():
     print("\033[34mWellcome to the \n\033[35m MEMORY GAME!\033[0m \n  \033[36mgood luck!\033[0m")
+    clear = lambda: os.system('cls')
     game = True
     counter = 0
     while game:
@@ -17,7 +18,6 @@ def play():
             print_matrix(matrix)
             cards = shuffling_cards(create_cards(x_y))
             original_matrix = matrix_mixing(matrix, cards)
-            print_matrix(original_matrix)
             play_game = True
             input("\033[34mIf you want to start the game press Enter.\033[0m")
             print("\033[34mGame started\033[0m")
@@ -55,6 +55,9 @@ def play():
                             original_matrix[coordinates["card2"]["x"]][coordinates["card2"]["y"]]
                     else:
                         print("Bad guess")
+                        print("card 1:", original_matrix[coordinates["card1"]["x"]][coordinates["card1"]["y"]], "card 2: ", original_matrix[coordinates["card2"]["x"]][coordinates["card2"]["y"]])
+                        time.sleep(10)
+                        clear()
                 print_matrix(new_matrix)
         if check_mat == "win":
             continue_playing = input("Continue playing? prees y/n")
