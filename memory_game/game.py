@@ -1,6 +1,8 @@
 from random import randrange
 
 
+
+
 def create_matrix(x_y_size: dict):
     x = x_y_size['x']
     y = x_y_size['y']
@@ -75,7 +77,8 @@ def check_coordinates(coordinates: dict, x_y: dict):
     y = x_y["y"]
     card1 = coordinates["card1"]
     card2 = coordinates["card2"]
-    if 0 < card1["x"] < x and 0 < card1["y"] < y and 0 < card2["x"] < x and 0 <=card2["y"] < y:
+    if 0 <= card1["x"] < x and 0 <= card1["y"] < y and 0 <= card2["x"] < x and 0 <= card2["y"] < y:
         return True
     else:
+        print("Coordinates out of range")
         return False
