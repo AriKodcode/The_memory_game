@@ -56,6 +56,7 @@ def play():
                     else:
                         print("Bad guess")
                         print("card 1:", original_matrix[coordinates["card1"]["x"]][coordinates["card1"]["y"]], "card 2: ", original_matrix[coordinates["card2"]["x"]][coordinates["card2"]["y"]])
+                        print("Waiting 10 seconds")
                         time.sleep(10)
                         clear()
                 print_matrix(new_matrix)
